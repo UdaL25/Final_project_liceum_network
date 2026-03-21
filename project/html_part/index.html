@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Лицей Social</title>
+  <link rel="stylesheet" href="../css_part/style.css" />
+</head>
+<body>
+  <nav id="navbar" class="hidden">
+    <div class="logo">Лицей</div>
+    <button id="logoutBtn">Выход</button>
+  </nav>
+
+  <main class="container">
+    <!-- Вход-->
+    <section id="loginPage">
+      <h1>Вход</h1>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input type="password" id="loginPass" placeholder="Пароль" required />
+        <button type="submit">Войти</button>
+      </form>
+      <p>Нет аккаунта? <a href="#" id="toRegister">Зарегистрироваться</a></p>
+      <div id="loginMsg" class="msg"></div>
+    </section>
+
+    <!-- Регистрация -->
+    <section id="registerPage" class="hidden">
+      <h1>Регистрация</h1>
+      <form id="registerForm">
+        <input type="text" id="regName" placeholder="Имя" required />
+        <input type="email" id="regEmail" placeholder="Email" required />
+        <input type="password" id="regPass" placeholder="Пароль" required />
+        <button type="submit">Создать аккаунт</button>
+      </form>
+      <p>Есть аккаунт? <a href="#" id="toLogin">Войти</a></p>
+      <div id="regMsg" class="msg"></div>
+    </section>
+
+    <!-- Лента новостей -->
+    <section id="feedPage" class="hidden">
+      <h1>Лента</h1>
+      <div id="postsList"></div>
+      <div class="pagination">
+        <button id="prevBtn" disabled>←</button>
+        <span id="pageInfo">1</span>
+        <button id="nextBtn">→</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../js_part/api.js"></script>
+  <script type="module" src="../js_part/app.js"></script>
+</body>
+</html>

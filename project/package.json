@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "lint": "eslint js_part/**/*.js",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "rootDir": "./js_part"
+  }
+}
